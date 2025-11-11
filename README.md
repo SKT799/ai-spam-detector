@@ -2,8 +2,6 @@
 
 An intelligent email classification system that distinguishes spam from legitimate emails (ham) using machine learning. This project combines a Flask backend with scikit-learn and a modern React frontend to deliver real-time spam detection with explainable results.
 
-> **Live Demo**: [Try it here](#) | **Repository**: [github.com/SKT799/ai-spam-detector](https://github.com/SKT799/ai-spam-detector)
-
 ---
 
 ## Table of Contents

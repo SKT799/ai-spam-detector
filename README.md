@@ -431,70 +431,6 @@ Output will be in `frontend/build/`.
 
 ---
 
-## Deployment
-
-### Backend
-Recommended platforms for the Flask backend:
-- **Render** - easy Python deployments
-- **Railway** - simple configuration
-- **Heroku** - classic PaaS
-- **AWS/GCP/Azure** - for production scale
-
-Example `render.yaml`:
-```yaml
-services:
-  - type: web
-    name: spam-detector-api
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    envVars:
-      - key: HF_TOKEN
-        sync: false
-```
-
-### Frontend
-Deploy the `frontend/build/` folder to:
-- **Netlify** - drag & drop or CLI
-- **Vercel** - Git integration
-- **GitHub Pages** - free for public repos
-- **Cloudflare Pages** - fast global CDN
-
-For API calls, configure redirects:
-```toml
-# netlify.toml
-[[redirects]]
-  from = "/api/*"
-  to = "https://your-backend.render.com/api/:splat"
-  status = 200
-```
-
----
-
-## Future Improvements
-
-### Model Enhancements
-- [ ] Retrain with more recent spam data
-- [ ] Add multi-language support
-- [ ] Experiment with transformer models (BERT, DistilBERT)
-- [ ] Active learning: incorporate user feedback
-
-### Features
-- [ ] Batch classification (upload CSV)
-- [ ] Email header analysis (sender reputation, SPF/DKIM)
-- [ ] User accounts and history
-- [ ] Custom threshold configuration per user
-- [ ] API rate limiting and authentication
-
-### Technical
-- [ ] Add caching (Redis) for frequent queries
-- [ ] Implement A/B testing for model versions
-- [ ] Set up CI/CD pipeline
-- [ ] Add comprehensive unit and integration tests
-- [ ] Monitor model drift in production
-
----
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, open an issue first to discuss what you'd like to change.
@@ -514,10 +450,6 @@ MIT License - feel free to use this project for learning or commercial purposes.
 - The open-source community for inspiration and tools
 
 ---
-
-## Contact
-
-**Satyam** - [@SKT799](https://github.com/SKT799)
 
 Project Link: [github.com/SKT799/ai-spam-detector](https://github.com/SKT799/ai-spam-detector)
 
